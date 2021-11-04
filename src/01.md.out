@@ -1,15 +1,15 @@
 "ratatouille": String
-cons("ratatouille", "baguette"): (_: String) * String
+["ratatouille" | "baguette"]: [_: String | String]
 refl: Equal(String, "ratatouille", "ratatouille")
-refl: Equal((_: String) * String, cons("ratatouille", "baguette"), cons("ratatouille", "baguette"))
+refl: Equal([_: String | String], ["ratatouille" | "baguette"], ["ratatouille" | "baguette"])
 "ratatouille": String
 refl: Equal(String, "ratatouille", "ratatouille")
-(_: String) * String: Type
+[_: String | String]: Type
 String: Type
 Type: Type
 refl: Equal(Type, String, String)
-(_: String) * String: Type
-cons("olive", "oil"): (_: String) * String
+[_: String | String]: Type
+["olive" | "oil"]: [_: String | String]
 172: Nat
 0: Nat
 0: Nat
