@@ -1,9 +1,9 @@
-add(x: Nat, y: Nat): Nat {
+function add(x: Nat, y: Nat): Nat {
   return nat_rec(x, y, (_prev, almost) => add1(almost))
 }
 
 // NOTE increase
-incr(x: Nat): Nat {
+function incr(x: Nat): Nat {
   return nat_rec(x, 1, (_prev, almost) => add(1, almost))
 }
 
