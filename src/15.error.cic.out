@@ -1,12 +1,12 @@
-I infer the type to be:
-  Vector(E, j)
-But the expected type is:
-  Vector(E, j1)
+I found syntax error in file: 15.error.cic
 
-15.error.cic:
- 24 |      //   - Pie ensures this by adding a `renaming` argument to all type checking functions,
- 25 |      //     and use `reanming` during `readback`.
- 26 |      //   - I handle this by using `subst` to rename bound variables.
  27 |      (j, head, tail, almost) => (j, equal) => tail
  28 |    )
  29 |
+ 30 |  aux(n, refl)
+ 31 |}
+ 32 |
+
+Found the symbol "}" in [1279, 1280], while expecting:
+ ":":
+     sequence_entry:let_fn@152 -> (name: identifier)@153 "("@154 (bindings: bindings):bindings@157 ")"@158 > ":" (ret_t: exp) (sequence: sequence) optional 
