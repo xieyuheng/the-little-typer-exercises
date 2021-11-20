@@ -1,9 +1,9 @@
-(x) => { [x | (_1) => { _1 }] }: (x: String) -> [_: String | (_1: String) -> String]
-["x" | (_1) => { _1 }]: [_: String | (_1: String) -> String]
-refl: Equal([_: String | (_1: String) -> String], ["x" | (_1) => { _1 }], ["x" | (_1) => { _1 }])
-refl: Equal((_: Nat) -> [_1: Nat | Nat], (_) => { [_ | _] }, (_) => { [_ | _] })
-refl: Equal((_: Nat) -> Nat, (_) => { _ }, (_) => { _ })
-refl: Equal((_: [_: Nat | Nat]) -> Nat, (_) => { car(_) }, (_) => { car(_) })
+(x) => [x | (_1) => _1]: (x: String) -> [_: String | (_1: String) -> String]
+["x" | (_1) => _1]: [_: String | (_1: String) -> String]
+refl: Equal([_: String | (_1: String) -> String], ["x" | (_1) => _1], ["x" | (_1) => _1])
+refl: Equal((_: Nat) -> [_1: Nat | Nat], (_) => [_ | _], (_) => [_ | _])
+refl: Equal((_: Nat) -> Nat, (_) => _, (_) => _)
+refl: Equal((_: [_: Nat | Nat]) -> Nat, (_) => car(_), (_) => car(_))
 refl: Equal([_: String | String], ["celery" | "carrot"], ["celery" | "carrot"])
 refl: Equal(String, "naught", "naught")
 refl: Equal(String, "more", "more")

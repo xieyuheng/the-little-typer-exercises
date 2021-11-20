@@ -3,17 +3,17 @@
 [T: Type | T]: Type
 [Nat | 1]: [T: Type | T]
 [String | "a"]: [T: Type | T]
-[(_: Nat) -> Nat | (_) => { add1(add1(add1(add1(add1(add1(_)))))) }]: [T: Type | T]
+[(_: Nat) -> Nat | (_) => add1(add1(add1(add1(add1(add1(_))))))]: [T: Type | T]
 ["toast" | refl]: [food: String | Equal(List(String), li(food, nil), li("toast", nil))]
 [6 | vec("pea", vec("pea", vec("pea", vec("pea", vec("pea", vec("pea", vecnil))))))]: [length: Nat | Vector(String, length)]
 [2 | vec("toast-and-jam", vec("tea", vecnil))]: [length: Nat | Vector(String, length)]
 [_: Equal(Nat, 2, 3) | Equal(String, "apple", "apple")]: Type
-[nil | refl]: [list: List(String) | Equal(List(String), list, list_ind(list, (target_list) => { List(String) }, nil, (head, tail, almost) => { list_ind(almost, (target_list) => { List(String) }, li(head, nil), (head1, tail1, almost1) => { li(head1, almost1) }) }))]
-[li("S", li("O", li("S", nil))) | refl]: [list: List(String) | Equal(List(String), list, list_ind(list, (target_list) => { List(String) }, nil, (head, tail, almost) => { list_ind(almost, (target_list) => { List(String) }, li(head, nil), (head1, tail1, almost1) => { li(head1, almost1) }) }))]
-[li("A", li("B", li("B", li("A", nil)))) | refl]: [list: List(String) | Equal(List(String), list, list_ind(list, (target_list) => { List(String) }, nil, (head, tail, almost) => { list_ind(almost, (target_list) => { List(String) }, li(head, nil), (head1, tail1, almost1) => { li(head1, almost1) }) }))]
-[nil | refl]: [list: List(String) | Equal(List(String), list_ind(list, (target_list) => { List(String) }, li("grape", nil), (head, tail, almost) => { li(head, almost) }), li("grape", list))]
-[li("grape", nil) | refl]: [list: List(String) | Equal(List(String), list_ind(list, (target_list) => { List(String) }, li("grape", nil), (head, tail, almost) => { li(head, almost) }), li("grape", list))]
-[li("grape", li("grape", nil)) | refl]: [list: List(String) | Equal(List(String), list_ind(list, (target_list) => { List(String) }, li("grape", nil), (head, tail, almost) => { li(head, almost) }), li("grape", list))]
+[nil | refl]: [list: List(String) | Equal(List(String), list, list_ind(list, (target_list) => List(String), nil, (head, tail, almost) => list_ind(almost, (target_list) => List(String), li(head, nil), (head1, tail1, almost1) => li(head1, almost1))))]
+[li("S", li("O", li("S", nil))) | refl]: [list: List(String) | Equal(List(String), list, list_ind(list, (target_list) => List(String), nil, (head, tail, almost) => list_ind(almost, (target_list) => List(String), li(head, nil), (head1, tail1, almost1) => li(head1, almost1))))]
+[li("A", li("B", li("B", li("A", nil)))) | refl]: [list: List(String) | Equal(List(String), list, list_ind(list, (target_list) => List(String), nil, (head, tail, almost) => list_ind(almost, (target_list) => List(String), li(head, nil), (head1, tail1, almost1) => li(head1, almost1))))]
+[nil | refl]: [list: List(String) | Equal(List(String), list_ind(list, (target_list) => List(String), li("grape", nil), (head, tail, almost) => li(head, almost)), li("grape", list))]
+[li("grape", nil) | refl]: [list: List(String) | Equal(List(String), list_ind(list, (target_list) => List(String), li("grape", nil), (head, tail, almost) => li(head, almost)), li("grape", list))]
+[li("grape", li("grape", nil)) | refl]: [list: List(String) | Equal(List(String), list_ind(list, (target_list) => List(String), li("grape", nil), (head, tail, almost) => li(head, almost)), li("grape", list))]
 vec("hi", vec("hi", vec("hi", vec("hi", vec("hi", vec("hi", vecnil)))))): Vector(String, 6)
 vecnil: Vector(Nat, 0)
 vec(1, vecnil): Vector(Nat, 1)
