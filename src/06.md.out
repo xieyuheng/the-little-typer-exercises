@@ -7,5 +7,11 @@ vecnil: Vector(List(String), 0)
 vecnil: Vector(List(List(String)), 0)
 vec("a", vecnil): Vector(String, 1)
 vec("a", vec("b", vecnil)): Vector(String, 2)
-"a": String
-vec("b", vec("c", vecnil)): Vector(String, 2)
+1: Nat
+1: Nat
+1: Nat
+1: Nat
+vecnil: Vector(Nat, 0)
+vec(2, vecnil): Vector(Nat, 1)
+vec(2, vec(3, vecnil)): Vector(Nat, 2)
+vec(2, vec(3, vec(4, vecnil))): Vector(Nat, 3)
