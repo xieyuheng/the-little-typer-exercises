@@ -1,12 +1,12 @@
 (x) => [x | (x1) => x1]: (x: String) -> [_: String | (_1: String) -> String]
 ["x" | (x1) => x1]: [_: String | (_1: String) -> String]
 refl: Equal([_: String | (_1: String) -> String], ["x" | (x1) => x1], ["x" | (y) => y])
-refl: Equal((_: Nat) -> [_1: Nat | Nat], (x) => [x | x], (y) => [y | y])
-refl: Equal((_: Nat) -> Nat, (y) => y, (x) => x)
-refl: Equal((_: [_: Nat | Nat]) -> Nat, (y) => car(y), (x) => car(x))
+refl: Equal((_: String) -> [_1: String | String], (x) => [x | x], (y) => [y | y])
+refl: Equal((_: String) -> String, (y) => y, (x) => x)
+refl: Equal((_: [_: String | String]) -> String, (y) => car(y), (x) => car(x))
 refl: Equal([_: String | String], ["celery" | "carrot"], ["celery" | "carrot"])
 refl: Equal(String, "naught", "naught")
 refl: Equal(String, "more", "more")
 refl: Equal(String, "more", "more")
 [String | String]: [_: Type | Type]
-[1 | 2]: [_: Nat | Nat]
+[Nat.add1(Nat.zero) | Nat.add1(Nat.add1(Nat.zero))]: [_: Nat | Nat]

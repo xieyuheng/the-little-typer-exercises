@@ -1,14 +1,16 @@
+import { Nat, nat_rec, zero, one, two, three } from "./02.md"
+
 function add(x: Nat, y: Nat): Nat {
-  return nat_rec(x, y, (_prev, almost) => add1(almost))
+  return nat_rec(x, y, (_prev, almost) => Nat.add1(almost))
 }
 
 // NOTE increase
 function incr(x: Nat): Nat {
-  return nat_rec(x, 1, (_prev, almost) => add(1, almost))
+  return nat_rec(x, one, (_prev, almost) => add(one, almost))
 }
 
-add(1)(3)
-incr(3)
+add(one)(three)
+incr(three)
 
-// NOTE `add(1)` is not equal to `incr` by reflection, we need to prove it.
-the(Equal((Nat) -> Nat, add(1), incr), refl)
+// NOTE `add(one)` is not equal to `incr` by reflection, we need to prove it.
+the(Equal((Nat) -> Nat, add(one), incr), refl)

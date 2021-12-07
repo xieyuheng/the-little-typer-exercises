@@ -10,9 +10,3 @@ Type: Type
 refl: Equal(Type, String, String)
 [_: String | String]: Type
 ["olive" | "oil"]: [_: String | String]
-172: Nat
-0: Nat
-0: Nat
-refl: Equal(Nat, 0, 0)
-refl: Equal(Nat, 0, 0)
-2: Nat
