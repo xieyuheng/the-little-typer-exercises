@@ -12,5 +12,5 @@ refl: Equal(Nat, 4, 4)
 6: Nat
 8: Nat
 refl: Equal(Nat, 34, 34)
-vec("a", vec("a", vec("b", vec("b", vec("c", vec("c", vecnil)))))): Vector(String, 6)
-vec("a", vec("a", vec("b", vec("b", vec("c", vec("c", vecnil)))))): Vector(String, 6)
+Vector.cons(vague String, vague 5, "a", Vector.cons(vague String, vague 4, "a", Vector.cons(vague String, vague 3, "b", Vector.cons(vague String, vague 2, "b", Vector.cons(vague String, vague 1, "c", Vector.cons(vague String, vague 0, "c", Vector.null(vague String))))))): Vector(String, 6)
+Vector.cons(vague String, vague 5, "a", Vector.cons(vague String, vague 4, "a", Vector.cons(vague String, vague 3, "b", Vector.cons(vague String, vague 2, "b", Vector.cons(vague String, vague 1, "c", Vector.cons(vague String, vague 0, "c", Vector.null(vague String))))))): Vector(String, 6)

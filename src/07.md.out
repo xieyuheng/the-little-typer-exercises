@@ -1,3 +1,3 @@
-vec("pea", vec("pea", vec("pea", vec("pea", vec("pea", vec("pea", vecnil)))))): Vector(String, 6)
-"LAST": String
-vec("1", vec("2", vec("3", vecnil))): Vector(String, 3)
+Vector.cons(vague String, vague 5, "pea", Vector.cons(vague String, vague 4, "pea", Vector.cons(vague String, vague 3, "pea", Vector.cons(vague String, vague 2, "pea", Vector.cons(vague String, vague 1, "pea", Vector.cons(vague String, vague 0, "pea", Vector.null(vague String))))))): Vector(String, 6)
+"d": String
+Vector.cons(vague String, vague 2, "a", Vector.cons(vague String, vague 1, "b", Vector.cons(vague String, vague 0, "c", Vector.null(vague String)))): Vector(String, 3)

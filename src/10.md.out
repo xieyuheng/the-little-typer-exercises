@@ -5,8 +5,8 @@
 [String | "a"]: [T: Type | T]
 [(_: Nat) -> Nat | (y) => add1(add1(add1(add1(add1(add1(y))))))]: [T: Type | T]
 ["toast" | refl]: [food: String | Equal(List(String), List.cons(vague String, food, List.null(vague String)), List.cons(vague String, "toast", List.null(vague String)))]
-[6 | vec("pea", vec("pea", vec("pea", vec("pea", vec("pea", vec("pea", vecnil))))))]: [length: Nat | Vector(String, length)]
-[2 | vec("toast-and-jam", vec("tea", vecnil))]: [length: Nat | Vector(String, length)]
+[6 | Vector.cons(vague String, vague 5, "pea", Vector.cons(vague String, vague 4, "pea", Vector.cons(vague String, vague 3, "pea", Vector.cons(vague String, vague 2, "pea", Vector.cons(vague String, vague 1, "pea", Vector.cons(vague String, vague 0, "pea", Vector.null(vague String)))))))]: [length: Nat | Vector(String, length)]
+[2 | Vector.cons(vague String, vague 1, "toast-and-jam", Vector.cons(vague String, vague 0, "tea", Vector.null(vague String)))]: [length: Nat | Vector(String, length)]
 [_: Equal(Nat, 2, 3) | Equal(String, "apple", "apple")]: Type
 [List.null(vague String) | refl]: [list: List(String) | Equal(List(String), list, induction (list) { (_target) => List(String) case null => List.null(vague String) case cons(head, tail, almost) => induction (almost.tail) { (_target) => List(String) case null => List.cons(vague String, head, List.null(vague String)) case cons(head1, tail1, almost1) => List.cons(vague String, head1, almost1.tail) } })]
 [List.cons(vague String, "S", List.cons(vague String, "O", List.cons(vague String, "S", List.null(vague String)))) | refl]: [list: List(String) | Equal(List(String), list, induction (list) { (_target) => List(String) case null => List.null(vague String) case cons(head, tail, almost) => induction (almost.tail) { (_target) => List(String) case null => List.cons(vague String, head, List.null(vague String)) case cons(head1, tail1, almost1) => List.cons(vague String, head1, almost1.tail) } })]
@@ -14,8 +14,8 @@
 [List.null(vague String) | refl]: [list: List(String) | Equal(List(String), induction (list) { (_target) => List(String) case null => List.cons(vague String, "grape", List.null(vague String)) case cons(head, tail, almost) => List.cons(vague String, head, almost.tail) }, List.cons(vague String, "grape", list))]
 [List.cons(vague String, "grape", List.null(vague String)) | refl]: [list: List(String) | Equal(List(String), induction (list) { (_target) => List(String) case null => List.cons(vague String, "grape", List.null(vague String)) case cons(head, tail, almost) => List.cons(vague String, head, almost.tail) }, List.cons(vague String, "grape", list))]
 [List.cons(vague String, "grape", List.cons(vague String, "grape", List.null(vague String))) | refl]: [list: List(String) | Equal(List(String), induction (list) { (_target) => List(String) case null => List.cons(vague String, "grape", List.null(vague String)) case cons(head, tail, almost) => List.cons(vague String, head, almost.tail) }, List.cons(vague String, "grape", list))]
-vec("hi", vec("hi", vec("hi", vec("hi", vec("hi", vec("hi", vecnil)))))): Vector(String, 6)
-vecnil: Vector(Nat, 0)
-vec(1, vecnil): Vector(Nat, 1)
-vec(1, vec(2, vecnil)): Vector(Nat, 2)
-vec(1, vec(2, vec(3, vecnil))): Vector(Nat, 3)
+Vector.cons(vague String, vague 5, "hi", Vector.cons(vague String, vague 4, "hi", Vector.cons(vague String, vague 3, "hi", Vector.cons(vague String, vague 2, "hi", Vector.cons(vague String, vague 1, "hi", Vector.cons(vague String, vague 0, "hi", Vector.null(vague String))))))): Vector(String, 6)
+Vector.null(vague Nat): Vector(Nat, 0)
+Vector.cons(vague Nat, vague 0, 1, Vector.null(vague Nat)): Vector(Nat, 1)
+Vector.cons(vague Nat, vague 1, 1, Vector.cons(vague Nat, vague 0, 2, Vector.null(vague Nat))): Vector(Nat, 2)
+Vector.cons(vague Nat, vague 2, 1, Vector.cons(vague Nat, vague 1, 2, Vector.cons(vague Nat, vague 0, 3, Vector.null(vague Nat)))): Vector(Nat, 3)
