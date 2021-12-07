@@ -1,2 +1,2 @@
 vec(1, vec(2, vec(3, vec(4, vec(5, vecnil))))): Vector(Nat, 5)
-li(1, li(2, li(3, nil))): List(Nat)
+List.cons(vague Nat, 1, List.cons(vague Nat, 2, List.cons(vague Nat, 3, List.null(vague Nat)))): List(Nat)

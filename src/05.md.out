@@ -1,13 +1,12 @@
-li("cooked", li("eaten", li("tried-cleaning", li("understood", li("slept", nil))))): List(String)
+List.cons(vague String, "cooked", List.cons(vague String, "eaten", List.cons(vague String, "tried-cleaning", List.cons(vague String, "understood", List.cons(vague String, "slept", List.null(vague String)))))): List(String)
 List(String): Type
-nil: List(String)
-nil: List(Nat)
-nil: List(List(String))
-li("a", li("b", li("c", nil))): List(String)
-li("a", li("b", li("c", nil))): List(String)
-(x) => list_ind(x, (target_list) => Nat, 0, (_head, _tail, almost) => add1(almost)): (x: List(String)) -> Nat
+List.null(vague String): List(String)
+List.null(vague Nat): List(Nat)
+List.null(vague List(String)): List(List(String))
+List.cons(vague String, "a", List.cons(vague String, "b", List.cons(vague String, "c", List.null(vague String)))): List(String)
+(x) => induction (x) { (_target) => Nat case null => 0 case cons(_head, _tail, almost) => add1(almost.tail) }: (x: List(String)) -> Nat
 5: Nat
-li(1, li(2, li(3, li(4, li(5, li(6, nil)))))): List(Nat)
-li(1, li(2, li(3, li(4, nil)))): List(Nat)
-li(3, li(2, li(1, nil))): List(Nat)
-li(1, li(2, li(3, li(4, li(5, li(6, nil)))))): List(Nat)
+List.cons(vague Nat, 1, List.cons(vague Nat, 2, List.cons(vague Nat, 3, List.cons(vague Nat, 4, List.cons(vague Nat, 5, List.cons(vague Nat, 6, List.null(vague Nat))))))): List(Nat)
+List.cons(vague Nat, 1, List.cons(vague Nat, 2, List.cons(vague Nat, 3, List.cons(vague Nat, 4, List.null(vague Nat))))): List(Nat)
+List.cons(vague Nat, 3, List.cons(vague Nat, 2, List.cons(vague Nat, 1, List.null(vague Nat)))): List(Nat)
+List.cons(vague Nat, 1, List.cons(vague Nat, 2, List.cons(vague Nat, 3, List.cons(vague Nat, 4, List.cons(vague Nat, 5, List.cons(vague Nat, 6, List.null(vague Nat))))))): List(Nat)
