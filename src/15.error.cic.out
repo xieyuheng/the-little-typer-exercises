@@ -1,11 +1,12 @@
-I found syntax error in file: 15.error.cic
+I infer the type to be:
+  Vector(E, prev)
+But the expected type is:
+  Vector(E, prev1)
 
-
-Found the number "0" in [3233, 3234], while expecting:
- ["identifier"]:
-     operator:var@9 -> > (name: identifier) 
- "car":
-     operator:car@9 -> > "car" "(" (target: exp) ")" 
- "cdr":
-     operator:cdr@9 -> > "cdr" "(" (target: exp) ")" 
- and so on ...
+15.error.cic:
+ 37 |        //     to all type checking functions,
+ 38 |        //     and use `reanming` during `readback`.
+ 39 |        //   - I handle this by using `subst` to rename bound variables.
+ 40 |        (prev, equal) => tail
+ 41 |    }
+ 42 |  }

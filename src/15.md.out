@@ -2,7 +2,7 @@
 "a": String
 "a": String
 "a": String
-Vector.null(vague String): Vector(String, 0)
-Vector.cons(vague String, vague 0, "b", Vector.null(vague String)): Vector(String, 1)
-Vector.cons(vague String, vague 1, "b", Vector.cons(vague String, vague 0, "c", Vector.null(vague String))): Vector(String, 2)
-Vector.cons(vague String, vague 2, "b", Vector.cons(vague String, vague 1, "c", Vector.cons(vague String, vague 0, "d", Vector.null(vague String)))): Vector(String, 3)
+Vector.null(vague String): Vector(String, Nat.zero)
+Vector.cons(vague String, vague Nat.zero, "b", Vector.null(vague String)): Vector(String, Nat.add1(Nat.zero))
+Vector.cons(vague String, vague Nat.add1(Nat.zero), "b", Vector.cons(vague String, vague Nat.zero, "c", Vector.null(vague String))): Vector(String, Nat.add1(Nat.add1(Nat.zero)))
+Vector.cons(vague String, vague Nat.add1(Nat.add1(Nat.zero)), "b", Vector.cons(vague String, vague Nat.add1(Nat.zero), "c", Vector.cons(vague String, vague Nat.zero, "d", Vector.null(vague String)))): Vector(String, Nat.add1(Nat.add1(Nat.add1(Nat.zero))))
