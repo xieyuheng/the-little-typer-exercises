@@ -4,7 +4,7 @@ But they are not.
 from left hand side:
   (y) => Nat.add1(y)
 to right hand side:
-  (x) => induction (x) { (_target) => Nat case zero => Nat.add1(Nat.zero) case add1(prev, almost) => Nat.add1(almost.prev) }
+  (x) => induction (x) { (_) => Nat case zero => Nat.add1(Nat.zero) case add1(prev, almost) => Nat.add1(almost.prev) }
 
 08.error.cic:
  13 |incr(three)

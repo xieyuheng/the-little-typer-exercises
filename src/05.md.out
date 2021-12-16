@@ -3,7 +3,7 @@ List(String): Type
 List.null(vague String): List(String)
 List.null(vague List(String)): List(List(String))
 List.cons(vague String, "a", List.cons(vague String, "b", List.cons(vague String, "c", List.null(vague String)))): List(String)
-(x) => induction (x) { (_target) => Nat case null => Nat.zero case cons(_head, _tail, almost) => Nat.add1(almost.tail) }: (x: List(String)) -> Nat
+(x) => induction (x) { (_) => Nat case null => Nat.zero case cons(_head, _tail, almost) => Nat.add1(almost.tail) }: (x: List(String)) -> Nat
 Nat.add1(Nat.add1(Nat.add1(Nat.add1(Nat.add1(Nat.zero))))): Nat
 List.cons(vague String, "1", List.cons(vague String, "2", List.cons(vague String, "3", List.cons(vague String, "4", List.cons(vague String, "5", List.cons(vague String, "6", List.null(vague String))))))): List(String)
 List.cons(vague String, "1", List.cons(vague String, "2", List.cons(vague String, "3", List.cons(vague String, "4", List.null(vague String))))): List(String)
