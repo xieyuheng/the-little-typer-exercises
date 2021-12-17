@@ -1,12 +1,12 @@
 (x) => [x | (x1) => x1]: (x: String) -> [_: String | (_1: String) -> String]
 ["x" | (x1) => x1]: [_: String | (_1: String) -> String]
-refl: Equal([_: String | (_1: String) -> String], ["x" | (x1) => x1], ["x" | (y) => y])
-refl: Equal((_: String) -> [_1: String | String], (x) => [x | x], (y) => [y | y])
-refl: Equal((_: String) -> String, (y) => y, (x) => x)
-refl: Equal((_: [_: String | String]) -> String, (y) => car(y), (x) => car(x))
-refl: Equal([_: String | String], ["celery" | "carrot"], ["celery" | "carrot"])
-refl: Equal(String, "naught", "naught")
-refl: Equal(String, "more", "more")
-refl: Equal(String, "more", "more")
+refl(vague [_: String | (_1: String) -> String], vague ["x" | (x1) => x1]): Equal([_: String | (_1: String) -> String], ["x" | (x1) => x1], ["x" | (y) => y])
+refl(vague (_: String) -> [_1: String | String], vague (x) => [x | x]): Equal((_: String) -> [_1: String | String], (x) => [x | x], (y) => [y | y])
+refl(vague (_: String) -> String, vague (y) => y): Equal((_: String) -> String, (y) => y, (x) => x)
+refl(vague (_: [_: String | String]) -> String, vague (y) => car(y)): Equal((_: [_: String | String]) -> String, (y) => car(y), (x) => car(x))
+refl(vague [_: String | String], vague ["celery" | "carrot"]): Equal([_: String | String], ["celery" | "carrot"], ["celery" | "carrot"])
+refl(vague String, vague "naught"): Equal(String, "naught", "naught")
+refl(vague String, vague "more"): Equal(String, "more", "more")
+refl(vague String, vague "more"): Equal(String, "more", "more")
 [String | String]: [_: Type | Type]
 [Nat.add1(Nat.zero) | Nat.add1(Nat.add1(Nat.zero))]: [_: Nat | Nat]

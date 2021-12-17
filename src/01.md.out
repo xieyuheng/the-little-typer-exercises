@@ -1,12 +1,12 @@
 "ratatouille": String
 ["ratatouille" | "baguette"]: [_: String | String]
-refl: Equal(String, "ratatouille", "ratatouille")
-refl: Equal([_: String | String], ["ratatouille" | "baguette"], ["ratatouille" | "baguette"])
+refl(vague String, vague "ratatouille"): Equal(String, "ratatouille", "ratatouille")
+refl(vague [_: String | String], vague ["ratatouille" | "baguette"]): Equal([_: String | String], ["ratatouille" | "baguette"], ["ratatouille" | "baguette"])
 "ratatouille": String
-refl: Equal(String, "ratatouille", "ratatouille")
+refl(vague String, vague "ratatouille"): Equal(String, "ratatouille", "ratatouille")
 [_: String | String]: Type
 String: Type
 Type: Type
-refl: Equal(Type, String, String)
+refl(vague Type, vague String): Equal(Type, String, String)
 [_: String | String]: Type
 ["olive" | "oil"]: [_: String | String]
