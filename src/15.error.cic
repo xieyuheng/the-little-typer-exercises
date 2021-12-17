@@ -12,7 +12,7 @@ function rest_bug(E: Type, n: Nat, vector: Vector(E, Nat.add1(n))): Vector(E, n)
 
   let aux: motive(Nat.add1(n), vector) = {
     let base: motive(zero, Vector.null) =
-      (j, equal) => absurd_ind(zero_add1_equal_absurd(j, equal), Vector(E, j))
+      (j, equal) => from_falsehood_anything(zero_add1_equal_absurd(j, equal), Vector(E, j))
 
     function step(
       prev: Nat,
