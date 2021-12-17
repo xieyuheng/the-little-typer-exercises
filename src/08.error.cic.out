@@ -1,9 +1,9 @@
 I am expecting the following two values to be the same (_: Nat) -> Nat.
 But they are not.
 
-from left hand side:
+from left hand side (from) of Equal:
   (y) => Nat.add1(y)
-to right hand side:
+to right hand side (to) of Equal:
   (x) => induction (x) { (_) => Nat case zero => Nat.add1(Nat.zero) case add1(prev, almost) => Nat.add1(almost.prev) }
 
 08.error.cic:
