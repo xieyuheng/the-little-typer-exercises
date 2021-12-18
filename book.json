@@ -6,12 +6,5 @@
     "Xie Yuheng"
   ],
   "date": "2021",
-  "src": "src",
-  "references": {
-    "xieyuheng/mathematical-structures": {
-      "host": "github.com",
-      "repo": "xieyuheng/mathematical-structures",
-      "version": "0.0.1"
-    }
-  }
+  "src": "src"
 }
