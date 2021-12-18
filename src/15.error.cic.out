@@ -3,7 +3,7 @@ I infer the type to be:
 But the expected type is:
   Vector(E, prev1)
 
-15.error.cic:
+src/15.error.cic:
  37 |        //     to all type checking functions,
  38 |        //     and use `reanming` during `readback`.
  39 |        //   - I handle this by using `subst` to rename bound variables.
