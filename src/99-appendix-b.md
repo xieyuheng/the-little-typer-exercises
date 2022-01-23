@@ -6,7 +6,7 @@ date: 2021-10-12
 # Forms of judgment
 
 A Type system is a system for guiding human judgment,
-In an implementation, each *form of judgment*
+In an implementation, each _form of judgment_
 corresponds to a function that determines
 whether a particular judgment is believable
 by the Laws and Commandments.
@@ -42,21 +42,21 @@ infer(ctx: Ctx, e: Exp): { t: Type, core: Core }
 
 # The forms of judgment for implementations of Pie
 
-The use of [Hungarian notation][] in the table below:
+The use of [hungarian notation][] in the table below:
 
 | Type   | Variable name          |
-|--------|------------------------|
+| ------ | ---------------------- |
 | `Ctx`  | `ctx`                  |
 | `Var`  | `x`                    |
 | `Exp`  | `e`, `et`              |
 | `Core` | `c1`, `c2`, `ct`, `ce` |
 
-[Hungarian notation]: https://en.wikipedia.org/wiki/Hungarian_notation
+[hungarian notation]: https://en.wikipedia.org/wiki/Hungarian_notation
 
 The forms of judgment for implementations of Pie:
 
 | Form of judgment               | Reading                                          |
-|--------------------------------|--------------------------------------------------|
+| ------------------------------ | ------------------------------------------------ |
 | `is_ctx(ctx)`                  | `ctx` is a context.                              |
 | `fresh(ctx) ~> x`              | `ctx` does not bind `x`.                         |
 | `lookup(ctx, x) ~> ct`         | looking up `x` in `ctx` yields the type `ct`.    |
@@ -68,10 +68,10 @@ The forms of judgment for implementations of Pie:
 
 # Inference rules
 
-Forms of judgment occur within *inference rules*.
+Forms of judgment occur within _inference rules_.
 An inference rule consists of a horizontal line.
-Below the line is a *conclusion*, and above the line
-is any number of *premises*.
+Below the line is a _conclusion_, and above the line
+is any number of _premises_.
 
 The meaning of a inference rule is that,
 if one believes in the premises,
@@ -102,6 +102,7 @@ we can read the above inference rule as a function
 implementing `infer` in the case of the `the` expression.
 
 Note that:
+
 - The input of the conclusion is read as arguments of the function.
 - The output of the conclusion is read as return value of the function.
 - The input of a promise is read as arguments of recursive call to form of judgments.
@@ -161,18 +162,18 @@ the_same(ctx, X, the(X, exp1), exp2) {
 Aside from [the], [switch], and one of the rules for `Type`,
 the rules fall into one of a few categories:
 
-1. *formation rules*, which describe the conditions under which an expression is a type;
-2. *introduction rules*, which describe the constructors for a type;
-3. *elimination rules*, which describe the eliminators for a type;
-4. *computation rules*, which describe the behavior of eliminators whose targets are constructors;
-5. *eta-rules*, which describe how to turn neutral expressions into values for some types;
-6. *other sameness rules*, which describe when sameness of subexpressions implies sameness.
+1. _formation rules_, which describe the conditions under which an expression is a type;
+2. _introduction rules_, which describe the constructors for a type;
+3. _elimination rules_, which describe the eliminators for a type;
+4. _computation rules_, which describe the behavior of eliminators whose targets are constructors;
+5. _eta-rules_, which describe how to turn neutral expressions into values for some types;
+6. _other sameness rules_, which describe when sameness of subexpressions implies sameness.
 
 ## Sameness
 
 It is important to remember that
 rules whose conclusions are sameness judgments
-are *specifications* for a normalization algorithm,
+are _specifications_ for a normalization algorithm,
 rather than a description of the algorithm itself.
 
 ```
