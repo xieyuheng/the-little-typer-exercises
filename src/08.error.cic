@@ -9,8 +9,8 @@ function incr(x: Nat): Nat {
   return nat_rec(x, one, (_prev, almost) => add(one, almost))
 }
 
-add(one)(three)
-incr(three)
+compute add(one)(three)
+compute incr(three)
 
 // NOTE `add(one)` is not equal to `incr` by reflection, we need to prove it.
-the(Equal((Nat) -> Nat, add(one), incr), refl)
+compute the(Equal((Nat) -> Nat, add(one), incr), refl)
