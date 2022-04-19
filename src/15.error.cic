@@ -24,7 +24,7 @@ function rest_bug(E: Type, n: Nat, vector: Vector(E, Nat.add1(n))): Vector(E, n)
     }
 
     return induction (vector) {
-      motive
+      motive motive
       case null => base
       case cons(vague prev, head, tail, almost) =>
         // NOTE The following will not pass type checker.
